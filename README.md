@@ -35,10 +35,13 @@ The repository is broken out into **four or more** subsections.
 ### How to use:
 - Create a .tfvars file based on the examples found in the tvfvars_examples page
 - Terraform init
-- Terraform Plan
-- Terraform Apply
+- Terraform plan
+- Terraform apply
 
+**Note**: Please raise a git issues with any problems or concerns.
 
 ### FAQ:
-- "Error: Please use a valid IAM role". This occurs after the networking configured is finalized. This is due to a race condition between the IAM role and the logging of it to the Databricks endpoint. Please re-plan and apply and it will go through. It can be mitigated with a sleep condition.
-- "What do I do with identities?". Identities should be integrated with SCIM. Once they are integrated with SCIM, reference them as data sources, similar to the identity assignment example. Then continue to assign permissions through the workspace provider.
+- "I get an Error: Please use a valid IAM role. What do I do?"
+    - This occurs after the networking configured is finalized. This is due to a race condition between the IAM role and the logging of it to the Databricks endpoint. Please re-plan and apply and it will go through. It can be mitigated with a sleep condition.
+- "What do I do with identities?". 
+    - Identities should be integrated with SCIM. Once they are integrated with SCIM, reference them as data sources, similar to the identity assignment example. Then continue to assign permissions through the workspace provider.
