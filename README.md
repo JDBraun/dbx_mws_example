@@ -28,18 +28,11 @@
     - Creation of logging resources and underlying cloud resources.
 &nbsp;
 
-- **Databricks Development.**: 
-    - Creation of cloud and Databricks Resources for a development environment.
+- **Environments:.**: 
+    - Development: Creation of cloud and Databricks Resources for a development environment.
+    - QA: Creation of cloud and Databricks Resources for a QA environment.
+    - Production: Creation of cloud and Databricks Resources for a production environment.
 &nbsp;
-
-- **Databricks QA.**: 
-    - Creation of cloud and Databricks Resources for a QA environment.
-&nbsp;
-
-- **Databricks Production.**: 
-    - Creation of cloud and Databricks Resources for a production environment.
-&nbsp;
-
 
 ### How to set-up:
 - Create a .tfvars file based on the examples found in the tfvars_example folder.
