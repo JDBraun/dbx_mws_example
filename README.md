@@ -19,6 +19,8 @@
     - Workspace Confs: Module to create consistent workspace configurations across workspace
 &nbsp;
 
+___
+
 ### Folder Structure - Individual Pipelines:
 - **Common Infrastructure/Unity Catalog**: 
     - Creation of the Unity Catalog metastore with no root storage, isolating it from other environments
@@ -28,11 +30,13 @@
     - Creation of logging resources and underlying cloud resources.
 &nbsp;
 
-- **Environments:.**: 
+- **Environments:**: 
     - Development: Creation of cloud and Databricks Resources for a development environment.
     - QA: Creation of cloud and Databricks Resources for a QA environment.
     - Production: Creation of cloud and Databricks Resources for a production environment.
 &nbsp;
+
+___
 
 ### How to set-up:
 - Create a .tfvars file based on the examples found in the tfvars_example folder.
@@ -45,10 +49,14 @@
 
 **Note**: Please raise a git issues with any problems or concerns about the repo.
 
+___
+
 ### Architecture Diagrams:
 - [Full Multi-Workspace Architecture](https://github.com/JDBraun/dbx_mws_example/blob/main/reference_images/full_arch_multi_workspace_mono_repo.png)
 - [Multi-Workspace Architecture](https://github.com/JDBraun/dbx_mws_example/blob/main/reference_images/multi_workspace_mono_repo.png)
 - [Simple Multi-Workspace Architecture](https://github.com/JDBraun/dbx_mws_example/blob/main/reference_images/simple_multi_workspace_mono_repo.png)
+
+___
 
 ### FAQ:
 - **"I get an Error: Please use a valid IAM role. What do I do?"**
