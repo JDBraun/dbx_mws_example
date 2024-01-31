@@ -1,12 +1,6 @@
 ## Databricks Multiple Workspace Repository Example
 
-### Folder Structure
-The repository is broken out into **four or more** subsections.
-- **Common Infrastructure**: Databricks infrastucture that is common across all workspaces
-    - Logging: Creation of the billable usage and audit logs
-    - Unity Catalog: Creation of the Unity Catalog metastore with no root storage, isolating it from other environments
-&nbsp;
-
+### Folder Structure - Modules:
 - **Common Modules: Cloud Provider**: Reusable modules for underlying cloud resources related to a workspace.
     - Cloud Provider Credential: Module to create the underlying cross-account role
     - Cloud Provider Network: Module to create the underlying network (VPC, subnet, security groups, etc.)
@@ -19,21 +13,32 @@ The repository is broken out into **four or more** subsections.
     - Identity assignment: Module to assign users and groups to the workspace
  &nbsp;
 
-- **Common Modules: Workspace**: Reusable assets for workspace-level resources
+- **Common Modules: Workspace**: Reusable modules for workspace-level resources
     - Unity Catalog: Module to create a catalog, and underlying cloud resources, isolated to the individual workspace
     - Cluster Policy: Module to create a parameterized cluster policy per environment
     - Workspace Confs: Module to create consistent workspace configurations across workspace
 &nbsp;
 
-- **Databricks: Environment Example**: Databricks workspaces per environment or other logical group
-    - Cloud Provider: Subsection for cloud related assets from modules and environment specifics (e.g. network peering)
-    - Databricks Account: Subsection for account related assets from modules and environment specifics (e.g. identitiy assignment)
-    - Databricks Workspace: Subsection for workspace related assets from modules and enviornment specifics (e.g. repos, notebooks, etc.)
+### Folder Structure - Individual Pipelines:
+- **Common Infrastructure/Unity Catalog**: 
+    - Creation of the Unity Catalog metastore with no root storage, isolating it from other environments
+&nbsp;
 
-### Architecture Diagrams:
-- [Full Multi-Workspace Architecture](https://github.com/JDBraun/dbx_mws_example/blob/main/reference_images/full_arch_multi_workspace_mono_repo.png)
-- [Multi-Workspace Architecture](https://github.com/JDBraun/dbx_mws_example/blob/main/reference_images/multi_workspace_mono_repo.png)
-- [Simple Multi-Workspace Architecture](https://github.com/JDBraun/dbx_mws_example/blob/main/reference_images/simple_multi_workspace_mono_repo.png)
+- **Common Infrastructure/Logging**: 
+    - Creation of logging resources and underlying cloud resources.
+&nbsp;
+
+- **Databricks Development.**: 
+    - Creation of cloud and Databricks Resources for a development environment.
+&nbsp;
+
+- **Databricks QA.**: 
+    - Creation of cloud and Databricks Resources for a QA environment.
+&nbsp;
+
+- **Databricks Production.**: 
+    - Creation of cloud and Databricks Resources for a production environment.
+&nbsp;
 
 
 ### How to set-up:
@@ -46,6 +51,11 @@ The repository is broken out into **four or more** subsections.
    - Terraform apply
 
 **Note**: Please raise a git issues with any problems or concerns about the repo.
+
+### Architecture Diagrams:
+- [Full Multi-Workspace Architecture](https://github.com/JDBraun/dbx_mws_example/blob/main/reference_images/full_arch_multi_workspace_mono_repo.png)
+- [Multi-Workspace Architecture](https://github.com/JDBraun/dbx_mws_example/blob/main/reference_images/multi_workspace_mono_repo.png)
+- [Simple Multi-Workspace Architecture](https://github.com/JDBraun/dbx_mws_example/blob/main/reference_images/simple_multi_workspace_mono_repo.png)
 
 ### FAQ:
 - **"I get an Error: Please use a valid IAM role. What do I do?"**
