@@ -14,7 +14,7 @@
  &nbsp;
 
 - **Common Modules: Workspace**: Reusable modules for workspace-level resources
-    - Unity Catalog: Module to create a catalog, and underlying cloud resources, isolated to the individual workspace
+    - Workspace Catalog: Module to create a catalog, and underlying cloud resources, isolated to the individual workspace
     - Cluster Policy: Module to create a parameterized cluster policy per environment
     - Workspace Confs: Module to create consistent workspace configurations across workspace
 &nbsp;
