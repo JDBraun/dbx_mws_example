@@ -30,7 +30,7 @@ ___
     - Creation of logging resources and underlying cloud resources.
 &nbsp;
 
-- **Environments:**: 
+- **Environments**: 
     - Development: Creation of cloud and Databricks Resources for a development environment.
     - QA: Creation of cloud and Databricks Resources for a QA environment.
     - Production: Creation of cloud and Databricks Resources for a production environment.
