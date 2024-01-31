@@ -33,12 +33,14 @@ The repository is broken out into **four or more** subsections.
 - [Simple Multi-Workspace Architecture](https://github.com/JDBraun/dbx_mws_example/blob/main/reference_images/simple_multi_workspace_mono_repo.png)
 
 
-### How to use:
-- Create a .tfvars file based on the examples found in the tvfvars_examples page
+### How to set-up:
+- Create a .tfvars file based on the examples found in the tfvars_example folder.
 - **Recommended**: Set environment variables for your AWS and Databricks credentials
-- Terraform init
-- Terraform plan
-- Terraform apply
+- Perform the following steps in: common_infrastructure/unity_catalog, common_infrastructure/logging, databricks_dev, databricks_prod, databricks_qa
+   - Add the required .tfvars file
+   - Terraform init
+   - Terraform plan
+   - Terraform apply
 
 **Note**: Please raise a git issues with any problems or concerns about the repo.
 
