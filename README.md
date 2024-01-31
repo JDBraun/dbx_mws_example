@@ -7,12 +7,16 @@ The repository is broken out into **four or more** subsections.
     - Unity Catalog: Creation of the Unity Catalog metastore with no root storage, isolating it from other environments
 &nbsp;
 
-- **Common Modules: Account**: Reusable assets for account-level resources
+- **Common Modules: Cloud Provider**: Reusable assets for underlying cloud resources resources
     - Cloud Provider Credential: Asset to create the underlying credential
     - Cloud Provider Network: Asset to create the underlying network
     - Cloud Provider Storage: Asset to create the underlying storage
+ &nbsp;
+
+- **Common Modules: Account**: Reusable assets for account-level resources
     - Metastore Assignment: Asset to assign the calling workspace to the metastore
     - Workspace Creation: Asset to create the workspace based on the outputs of the previous modules
+    - Identity assignment: Asset to assign resources to the workspace
  &nbsp;
 
 - **Common Modules: Workspace**: Reusable assets for workspace-level resources
