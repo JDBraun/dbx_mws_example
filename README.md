@@ -45,5 +45,6 @@ The repository is broken out into **four or more** subsections.
 ### FAQ:
 - **"I get an Error: Please use a valid IAM role. What do I do?"**
     - This occurs after the networking configured is finalized. This is due to a race condition between the IAM role and the logging of it to the Databricks endpoint. Please re-plan and apply and it will go through. It can be mitigated with a sleep condition.
+
 - **"What do I do with identities?"**. 
     - Identities should be integrated with SCIM. Once they are integrated with SCIM, reference them as data sources, similar to the identity assignment example. Then continue to assign permissions through the workspace provider.
