@@ -4,7 +4,7 @@
 The repository is broken out into **four or more** subsections.
 - **Common Infrastructure**: Databricks infrastucture that is common across all workspaces
     - Logging: Creation of the billable usage and audit logs
-    - Unity Catalog: Creation of the Unity Catalog
+    - Unity Catalog: Creation of the Unity Catalog metastore with no root storage, isolating it from other environments
 &nbsp;
 
 - **Common Modules: Account**: Reusable assets for account-level resources
@@ -16,6 +16,7 @@ The repository is broken out into **four or more** subsections.
  &nbsp;
 
 - **Common Modules: Workspace**: Reusable assets for workspace-level resources
+    - Unity Catalog: Catalog isolated to each individual workspace 
     - Cluster: Asset to create a cluster
     - Cluster Policy: Asset to create a cluster policy
     - Secrets: Asset to create a workspace specific secret
@@ -34,14 +35,15 @@ The repository is broken out into **four or more** subsections.
 
 ### How to use:
 - Create a .tfvars file based on the examples found in the tvfvars_examples page
+- **Recommended**: Set environment variables for your AWS and Databricks credentials
 - Terraform init
 - Terraform plan
 - Terraform apply
 
-**Note**: Please raise a git issues with any problems or concerns.
+**Note**: Please raise a git issues with any problems or concerns about the repo.
 
 ### FAQ:
-- "I get an Error: Please use a valid IAM role. What do I do?"
+- **"I get an Error: Please use a valid IAM role. What do I do?"**
     - This occurs after the networking configured is finalized. This is due to a race condition between the IAM role and the logging of it to the Databricks endpoint. Please re-plan and apply and it will go through. It can be mitigated with a sleep condition.
-- "What do I do with identities?". 
+- **"What do I do with identities?"**. 
     - Identities should be integrated with SCIM. Once they are integrated with SCIM, reference them as data sources, similar to the identity assignment example. Then continue to assign permissions through the workspace provider.

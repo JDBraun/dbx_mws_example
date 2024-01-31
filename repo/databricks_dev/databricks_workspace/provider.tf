@@ -3,5 +3,8 @@ terraform {
     databricks = {
       source  = "databricks/databricks"
     }
+    aws = {
+      source  = "hashicorp/aws"
+    }
   }
 }

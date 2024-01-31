@@ -41,10 +41,16 @@ module "databricks_account" {
 module "databricks_workspace" {
     source = "./databricks_workspace"
      providers = {
+        aws = aws
         databricks = databricks.workspace
     }
 
+    aws_account_id        = var.aws_account_id
+    databricks_account_id = var.databricks_account_id
+    resource_prefix       = var.resource_prefix
+    workspace_id          = module.databricks_account.workspace_id
+    uc_catalog_name       = "${var.resource_prefix}-catalog-${module.databricks_account.workspace_id}"
+    workspace_catalog_admin = var.user_name
     team = var.team
   
 }
-

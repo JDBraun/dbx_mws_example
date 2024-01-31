@@ -21,7 +21,3 @@ variable "uc_catalog_name" {
 variable "workspace_catalog_admin" {
   type = string
 }
-
-variable "team" {
-  type = string
-}
