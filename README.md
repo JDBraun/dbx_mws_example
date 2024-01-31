@@ -7,23 +7,22 @@ The repository is broken out into **four or more** subsections.
     - Unity Catalog: Creation of the Unity Catalog metastore with no root storage, isolating it from other environments
 &nbsp;
 
-- **Common Modules: Cloud Provider**: Reusable assets for underlying cloud resources related to a workspace. **NOTE**: Other cloud resources, e.g. S3 bucket and IAM role for a catalog are embeded in the workspace module for simplicity.
-    - Cloud Provider Credential: Asset to create the underlying credential
-    - Cloud Provider Network: Asset to create the underlying network
-    - Cloud Provider Storage: Asset to create the underlying storage
+- **Common Modules: Cloud Provider**: Reusable modules for underlying cloud resources related to a workspace.
+    - Cloud Provider Credential: Module to create the underlying cross-account role
+    - Cloud Provider Network: Module to create the underlying network (VPC, subnet, security groups, etc.)
+    - Cloud Provider Storage: Module to create the underlying workspace root bucket
  &nbsp;
 
-- **Common Modules: Account**: Reusable assets for account-level resources
-    - Metastore Assignment: Asset to assign the calling workspace to the metastore
-    - Workspace Creation: Asset to create the workspace based on the outputs of the previous modules
-    - Identity assignment: Asset to assign resources to the workspace
+- **Common Modules: Account**: Reusable modules for account-level resources
+    - Metastore Assignment: Module to assign the calling workspace to the metastore
+    - Workspace Creation: Module to create the workspace based on the outputs of the previous modules
+    - Identity assignment: Module to assign users and groups to the workspace
  &nbsp;
 
 - **Common Modules: Workspace**: Reusable assets for workspace-level resources
-    - Unity Catalog: Catalog isolated to each individual workspace 
-    - Cluster: Asset to create a cluster
-    - Cluster Policy: Asset to create a cluster policy
-    - Secrets: Asset to create a workspace specific secret
+    - Unity Catalog: Module to create a catalog, and underlying cloud resources, isolated to the individual workspace
+    - Cluster Policy: Module to create a parameterized cluster policy per environment
+    - Workspace Confs: Module to create consistent workspace configurations across workspace
 &nbsp;
 
 - **Databricks: Environment Example**: Databricks workspaces per environment or other logical group
