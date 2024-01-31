@@ -1,5 +1,5 @@
 module "cloud_provider_network" {
-  source = "../../common_modules_account/cloud_provider_network"
+  source = "../../common_modules_cloud_provider/cloud_provider_network"
 
   vpc_cidr_range       = var.vpc_cidr_range
   availability_zones   = var.availability_zones
@@ -13,7 +13,7 @@ module "cloud_provider_network" {
 }
 
 module "cloud_provider_credential" {
-  source = "../../common_modules_account/cloud_provider_credential"
+  source = "../../common_modules_cloud_provider/cloud_provider_credential"
 
   aws_account_id        = var.aws_account_id
   databricks_account_id = var.databricks_account_id
@@ -26,7 +26,7 @@ module "cloud_provider_credential" {
 }
 
 module "cloud_provider_storage" {
-  source = "../../common_modules_account/cloud_provider_storage"
+  source = "../../common_modules_cloud_provider/cloud_provider_storage"
 
   dbfsname = var.dbfsname
 }
