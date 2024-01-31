@@ -7,7 +7,7 @@ The repository is broken out into **four or more** subsections.
     - Unity Catalog: Creation of the Unity Catalog metastore with no root storage, isolating it from other environments
 &nbsp;
 
-- **Common Modules: Cloud Provider**: Reusable assets for underlying cloud resources resources
+- **Common Modules: Cloud Provider**: Reusable assets for underlying cloud resources related to a workspace. **NOTE**: Other cloud resources, e.g. S3 bucket and IAM role for a catalog are embeded in the workspace module for simplicity.
     - Cloud Provider Credential: Asset to create the underlying credential
     - Cloud Provider Network: Asset to create the underlying network
     - Cloud Provider Storage: Asset to create the underlying storage
