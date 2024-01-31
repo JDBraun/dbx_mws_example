@@ -35,7 +35,7 @@ The repository is broken out into **four or more** subsections.
 
 ### How to set-up:
 - Create a .tfvars file based on the examples found in the tfvars_example folder.
-- **Recommended**: Set environment variables for your AWS and Databricks credentials
+   - **Recommended**: Set environment variables for your AWS and Databricks credentials
 - Perform the following steps in: **common_infrastructure/unity_catalog**, **common_infrastructure/logging**, **databricks_dev**, **databricks_qa**, and **databricks_qa**
    - *Add the required .tfvars file*
    - Terraform init
