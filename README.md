@@ -1,7 +1,7 @@
 ## Databricks Multiple Workspace Repository Example
 
 ### Folder Structure - Modules:
-- **Common Modules: Cloud Provider**: Reusable modules for underlying cloud resources related to a workspace.
+- **Common Modules: Cloud Provider**: Reusable modules for underlying cloud resources related to a workspace
     - Cloud Provider Credential: Module to create the underlying cross-account role
     - Cloud Provider Network: Module to create the underlying network (VPC, subnet, security groups, etc.)
     - Cloud Provider Storage: Module to create the underlying workspace root bucket
@@ -27,19 +27,19 @@ ___
 &nbsp;
 
 - **Common Infrastructure/Logging**: 
-    - Creation of logging resources and underlying cloud resources.
+    - Creation of logging resources and underlying cloud resources
 &nbsp;
 
 - **Environments**: 
-    - Development: Creation of cloud and Databricks Resources for a development environment.
-    - QA: Creation of cloud and Databricks Resources for a QA environment.
-    - Production: Creation of cloud and Databricks Resources for a production environment.
+    - Development: Creation of cloud and Databricks Resources for a development environment
+    - QA: Creation of cloud and Databricks Resources for a QA environment
+    - Production: Creation of cloud and Databricks Resources for a production environment
 &nbsp;
 
 ___
 
 ### How to set-up:
-- Create a .tfvars file based on the examples found in the tfvars_example folder.
+- Create a .tfvars file based on the examples found in the tfvars_example folder
    - **Recommended**: Set environment variables for your AWS and Databricks credentials
 - Perform the following steps in: **common_infrastructure/unity_catalog**, **common_infrastructure/logging**, **databricks_dev**, **databricks_qa**, and **databricks_qa**
    - *Add the required .tfvars file*
@@ -47,7 +47,7 @@ ___
    - Terraform plan
    - Terraform apply
 
-**Note**: Please raise a git issues with any problems or concerns about the repo.
+**Note**: Please raise a git issues with any problems or concerns about the repo
 
 ___
 
