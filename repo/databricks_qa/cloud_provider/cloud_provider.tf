@@ -26,7 +26,7 @@ module "cloud_provider_credential" {
 }
 
 module "cloud_provider_storage" {
-  source = "../../common_modules_cloud_provider/cloud_provider_storage"
-
-  dbfsname = var.dbfsname
+  source                = "../../common_modules_cloud_provider/cloud_provider_storage"
+  databricks_account_id = var.databricks_account_id
+  dbfsname              = var.dbfsname
 }
