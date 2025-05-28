@@ -1,3 +1,5 @@
+# ⚠️ This repository is unmaintained and should be used for reference purposes only. For up-to-date Terraform code tailored for security-forward organizations, see the [Security Reference Architecture – Terraform Templates repository](https://github.com/databricks/terraform-databricks-sra).
+
 ## Databricks Multiple Workspace Repository Example
 
 ### Folder Structure - Modules:
